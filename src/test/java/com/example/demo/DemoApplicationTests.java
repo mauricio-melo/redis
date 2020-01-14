@@ -20,7 +20,7 @@ public class DemoApplicationTests {
 	@Test
 	public void contextLoads() {
 		userService.save(User.builder()
-				.id("2545b500-d92e-483d-b2a2-fa8279082k58")
+				.id("2545b500-d92e-483d-b2a2-fa8279082k60")
 				.name("Mauricio Melo")
 				.build());
 	}
