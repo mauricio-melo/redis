@@ -1,9 +1,6 @@
 package com.example.demo.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
 import org.springframework.data.redis.core.TimeToLive;
@@ -15,8 +12,9 @@ import java.util.concurrent.TimeUnit;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-//@RedisHash(value = "User")
-@RedisHash(value = "User", timeToLive = 30L)
+@ToString
+@RedisHash(value = "User")
+//@RedisHash(value = "User", timeToLive = 30L)
 public class User implements Serializable {
 
     @Id
@@ -24,6 +22,6 @@ public class User implements Serializable {
 
     private String name;
 
-//    @TimeToLive(unit = TimeUnit.SECONDS)
-//    private Long timeout;
+    @TimeToLive(unit = TimeUnit.MINUTES)
+    private Long timeout;
 }

@@ -13,13 +13,13 @@ public class UserService {
 
 //    private final TestRepository testRepository;
 //    @Autowired
-//    private TestRepository testRepository;
+    private final TestRepository testRepository;
 
-    private final UserRepository userRepository;
+//    private final UserRepository userRepository;
 
     public void save(final User user) {
-//        testRepository.save(user);
-        userRepository.save(user);
+        testRepository.save(user);
+//        userRepository.save(user);
 //        userRepository.findById(user.getId());
     }
 
